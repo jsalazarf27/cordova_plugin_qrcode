@@ -1,0 +1,37 @@
+{
+    "name": "cordova-plugin-qrcode",
+    "version": "0.0.1",
+    "description": "An Android and iOS Cordova plugin that allows users to generate Qr code",
+    "cordova": {
+        "id": "cordova-plugin-qrcode",
+        "platforms": [
+            "android",
+            "ios"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jsalazarf27/cordova_plugin_qrcode.git"
+    },
+    "keywords": [
+        "Qr",
+        "ecosystem:cordova",
+        "cordova-android",
+        "cordova-ios"
+    ],
+    "engines": [{
+            "name": "cordova-android",
+            "version": ">=3.0.0"
+        },
+        {
+            "name": "cordova-ios",
+            "version": ">=3.0.0"
+        }
+    ],
+    "author": "John Alexander Salazar <jsalazar@todo1.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/jsalazarf27/cordova_plugin_qrcode/issues"
+    },
+    "homepage": "https://github.com/jsalazarf27/cordova_plugin_qrcode/"
+}

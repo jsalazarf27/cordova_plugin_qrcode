@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-qrcode" version="0.0.1">
+    <name>QrCode</name>
+
+    <description>An Android and iOS Cordova plugin that allows users to generate Qr code</description>
+    <license>MIT</license>
+
+    <keywords>cordova,android,qr,iOS</keywords>
+    <repo>https://github.com/jsalazarf27/cordova_plugin_qrcode.git</repo>
+    <issue>https://github.com/jsalazarf27/cordova_plugin_qrcode/issues</issue>
+  
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+  
+    <js-module src="www/QrCodePlugin.js" name="qrCodePlugin">
+        <clobbers target="window.plugins.qrCodePlugin" />
+    </js-module>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="QrCodePlugin">
+                <param name="android-package" value="com.todo1.cordova.plugin.QrCodePlugin"/>
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <provider android:authorities="${applicationId}.provider" 
+                    android:exported="false" 
+                    android:grantUriPermissions="true" 
+                    android:name="android.support.v4.content.FileProvider">
+                <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths" />
+            </provider>
+        </config-file>
+        <framework src="com.android.support:support-v4:23.1.0" />
+        <framework src="com.google.zxing:core:3.4.0" />
+        <resource-file src="android/res/xml/provider_paths.xml" target="res/xml/provider_paths.xml" />
+        <resource-file src="android/res/drawable/ic_bancolombia.xml" target="res/drawable/ic_bancolombia.xml" />
+        <source-file src="src/android/QrCodePlugin.java" target-dir="src/com/todo1/cordova/plugin" />
+    </platform>
+</plugin>
