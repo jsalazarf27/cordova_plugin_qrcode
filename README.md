@@ -8,7 +8,7 @@ cordova plugin qr code
 
 ### generate qrcode
 
-    window.plugins.toastyPlugin.shareqr(message,subject,qr, onSuccess, onFailure)
+    window.plugins.qrCodePlugin.shareqr(message,subject,qr, onSuccess, onFailure)
 - **onSuccess**: function (s) {...} _Callback for successful scan._
 - **onFailure**: function (s) {...} _Callback for cancelled scan or error._
 

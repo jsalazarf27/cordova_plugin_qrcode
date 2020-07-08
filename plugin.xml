@@ -36,6 +36,21 @@
         <framework src="com.google.zxing:core:3.4.0" />
         <resource-file src="android/res/xml/provider_paths.xml" target="res/xml/provider_paths.xml" />
         <resource-file src="android/res/drawable/ic_bancolombia.xml" target="res/drawable/ic_bancolombia.xml" />
-        <source-file src="src/android/QrCodePlugin.java" target-dir="src/com/todo1/cordova/plugin" />
+        <source-file src="android/QrCodePlugin.java" target-dir="src/com/todo1/cordova/plugin" />
+    </platform>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+
+            <feature name="QrCodePlugin">
+                <param name="ios-package" value="QrCodePlugin" />
+            </feature>
+
+        </config-file>
+
+        <!-- Add in the plugin .swift files here -->
+        <source-file src="ios/QrCodePlugin.swift" />
+        <resource-file src="ios/res/ic_bancolombia.png" />
+        <!-- Add in the swift-support plugin by default -->
+        <dependency id="cordova-plugin-add-swift-support" version="2.0.2"/>
     </platform>
 </plugin>

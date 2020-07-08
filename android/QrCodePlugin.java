@@ -1,4 +1,4 @@
-package com.stanleyidesis.toastyplugintest;
+package com.todo1.cordova.plugin;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.PluginResult;
