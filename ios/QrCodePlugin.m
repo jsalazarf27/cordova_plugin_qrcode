@@ -40,7 +40,7 @@
 }
 
 -(void)generateQrCode:(NSString *)messageString subject:(NSString *)subject qr:(NSString *)qrString{
-    CIImage *qrImage = [self createQRForString:messageString];
+    CIImage *qrImage = [self createQRForString:qrString];
     UIImage *topImage  = [[UIImage alloc] initWithCIImage:qrImage];
     UIImage *bottomImage  = [UIImage imageNamed:@"ic_bancolombia"];
 
